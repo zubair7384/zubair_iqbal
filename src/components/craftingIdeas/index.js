@@ -11,9 +11,6 @@ import "./styles.scss"
 export default class CraftingIdeas extends React.Component {
   componentDidMount() {
     new WOW.WOW().init()
-    if (typeof window !== "undefined") {
-      navigate("/venues")
-    }
   }
 
   render() {
@@ -21,7 +18,7 @@ export default class CraftingIdeas extends React.Component {
       <div className="crafting_container">
         <img className="wow fadeInLeft crafting_line" src={Line} alt="line" />
         <H2 heading="CRAFTING ideas." className="crafting_text wow fadeInUp" />
-        {window.screen.width < 576 ? (
+        {typeof window !== "undefined" && window.screen.width < 576 ? (
           <img className="ideas_image" src={IdeasMobile} alt="ideas" />
         ) : (
           <img className="ideas_image" src={Ideas} alt="ideas" />

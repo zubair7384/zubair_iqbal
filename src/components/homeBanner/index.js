@@ -14,13 +14,9 @@ export default function HomeBanner() {
 
   const [goingUp, setGoingUp] = useState(false)
 
-  if (typeof window !== "undefined") {
-    navigate("/venues")
-  }
-
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY
+      const currentScrollY = typeof window !== "undefined" && window.scrollY
       if (prevScrollY.current > currentScrollY && goingUp) {
         setGoingUp(false)
       }
@@ -29,12 +25,15 @@ export default function HomeBanner() {
       }
 
       prevScrollY.current = currentScrollY
-      console.log(goingUp, window.scrollY)
+      console.log(goingUp, typeof window !== "undefined" && window.scrollY)
     }
 
-    window.addEventListener("scroll", handleScroll, { passive: true })
+    typeof window !== "undefined" &&
+      window.addEventListener("scroll", handleScroll, { passive: true })
 
-    return () => window.removeEventListener("scroll", handleScroll)
+    return () =>
+      typeof window !== "undefined" &&
+      window.removeEventListener("scroll", handleScroll)
   }, [goingUp])
   return (
     <div className="container">
@@ -54,11 +53,11 @@ export default function HomeBanner() {
       </div>
       <div
         className={`${
-          goingUp && window.scrollY > 1
+          goingUp && typeof window !== "undefined" && window.scrollY > 1
             ? "container_wrapper fixed"
             : "container_wrapper"
         } ${
-          window.scrollY > 50
+          typeof window !== "undefined" && window.scrollY > 50
             ? "container_wrapper relative"
             : "container_wrapper"
         }`}
