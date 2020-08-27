@@ -8,9 +8,9 @@ import WOW from "wowjs"
 import "./styles.scss"
 
 export default class InspireDesign extends React.Component {
-  componentDidMount() {
-    new WOW.WOW().init()
-  }
+  // componentDidMount() {
+  //   new WOW.WOW().init()
+  // }
   render() {
     return (
       <div className="inspire_container flex">
