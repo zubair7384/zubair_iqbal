@@ -14,6 +14,10 @@ export default function HomeBanner() {
 
   const [goingUp, setGoingUp] = useState(false)
 
+  if (typeof window !== "undefined") {
+    navigate("/venues")
+  }
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY

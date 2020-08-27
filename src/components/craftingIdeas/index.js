@@ -11,6 +11,9 @@ import "./styles.scss"
 export default class CraftingIdeas extends React.Component {
   componentDidMount() {
     new WOW.WOW().init()
+    if (typeof window !== "undefined") {
+      navigate("/venues")
+    }
   }
 
   render() {
