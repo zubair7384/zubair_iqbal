@@ -18,11 +18,11 @@ export default class CraftingIdeas extends React.Component {
       <div className="crafting_container">
         <img className="wow fadeInLeft crafting_line" src={Line} alt="line" />
         <H2 heading="CRAFTING ideas." className="crafting_text wow fadeInUp" />
-        {typeof window !== "undefined" && window.screen.width < 576 ? (
+        {/* {typeof window !== "undefined" && window.screen.width < 576 ? (
           <img className="ideas_image" src={IdeasMobile} alt="ideas" />
         ) : (
           <img className="ideas_image" src={Ideas} alt="ideas" />
-        )}
+        )} */}
         <div className="stitching_wrapper">
           <H3
             className="wow fadeInUp stitching_text"

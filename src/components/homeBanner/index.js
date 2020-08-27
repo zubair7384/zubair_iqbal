@@ -14,27 +14,27 @@ export default function HomeBanner() {
 
   const [goingUp, setGoingUp] = useState(false)
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = typeof window !== "undefined" && window.scrollY
-      if (prevScrollY.current > currentScrollY && goingUp) {
-        setGoingUp(false)
-      }
-      if (prevScrollY.current < currentScrollY && !goingUp) {
-        setGoingUp(true)
-      }
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const currentScrollY = typeof window !== "undefined" && window.scrollY
+  //     if (prevScrollY.current > currentScrollY && goingUp) {
+  //       setGoingUp(false)
+  //     }
+  //     if (prevScrollY.current < currentScrollY && !goingUp) {
+  //       setGoingUp(true)
+  //     }
 
-      prevScrollY.current = currentScrollY
-      console.log(goingUp, typeof window !== "undefined" && window.scrollY)
-    }
+  //     prevScrollY.current = currentScrollY
+  //     console.log(goingUp, typeof window !== "undefined" && window.scrollY)
+  //   }
 
-    typeof window !== "undefined" &&
-      window.addEventListener("scroll", handleScroll, { passive: true })
+  //   typeof window !== "undefined" &&
+  //     window.addEventListener("scroll", handleScroll, { passive: true })
 
-    return () =>
-      typeof window !== "undefined" &&
-      window.removeEventListener("scroll", handleScroll)
-  }, [goingUp])
+  //   return () =>
+  //     typeof window !== "undefined" &&
+  //     window.removeEventListener("scroll", handleScroll)
+  // }, [goingUp])
   return (
     <div className="container">
       <div className="social_icons">
@@ -52,17 +52,17 @@ export default function HomeBanner() {
         ))}
       </div>
       <div
-        className={`${
-          goingUp && typeof window !== "undefined" && window.scrollY > 1
-            ? "container_wrapper fixed"
-            : "container_wrapper"
-        } ${
-          typeof window !== "undefined" && window.scrollY > 50
-            ? "container_wrapper relative"
-            : "container_wrapper"
-        }`}
+      // className={`${
+      //   goingUp && typeof window !== "undefined" && window.scrollY > 1
+      //     ? "container_wrapper fixed"
+      //     : "container_wrapper"
+      // } ${
+      //   typeof window !== "undefined" && window.scrollY > 50
+      //     ? "container_wrapper relative"
+      //     : "container_wrapper"
+      // }`}
       >
-        <div className="first_row">
+        {/* <div className="first_row">
           <img
             src={Hello}
             className={
@@ -102,7 +102,7 @@ export default function HomeBanner() {
         </div>
         <div
           className={`${goingUp ? "second_row scrolling" : "second_row"}`}
-        ></div>
+        ></div> */}
       </div>
     </div>
   )
