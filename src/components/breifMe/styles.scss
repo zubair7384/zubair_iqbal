@@ -1,0 +1,47 @@
+.breif_me_container {
+  @media (max-width: 576px) {
+    padding-left: 19px;
+  }
+  .work_wrapper {
+    display: flex;
+    padding-left: 18rem;
+    padding-top: 18rem;
+    @media (max-width: 1024px) {
+      padding-left: 8.5rem;
+      padding-top: 14rem;
+    }
+    @media (max-width: 768px) {
+      padding-left: 1rem;
+    }
+    @media (max-width: 576px) {
+      padding-left: 0;
+    }
+    .breif_wrapper {
+      padding-left: 5rem;
+      @media (max-width: 1024px) {
+        padding-top: 1rem;
+        padding-left: 2.5rem;
+      }
+
+      .work_text {
+        font-family: "Gilroy-Light";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 86.19%;
+        margin: 0;
+      }
+      .breif_text {
+        margin-top: 16px;
+        font-family: "Gilroy-ExtraBold";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 35px;
+        line-height: 86.19%;
+        @media (max-width: 768px) {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

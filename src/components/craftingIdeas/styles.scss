@@ -1,0 +1,99 @@
+.crafting_container {
+  position: relative;
+  height: 890px;
+  background: #f8f8f8;
+  margin: 0 2%;
+  padding-top: 4rem;
+  @media (max-width: 1366px) {
+    margin: 0 2.5%;
+    padding-top: 0;
+  }
+  @media (max-width: 1024px) {
+    height: 716px;
+    padding-top: 7rem;
+  }
+  @media (max-width: 768px) {
+    height: 736px;
+    padding-top: 1rem;
+    margin: 0;
+  }
+  .crafting_line {
+    margin-bottom: 6px;
+    margin-left: 338px;
+    @media (max-width: 1366px) {
+      margin-left: 9rem;
+    }
+    @media (max-width: 768px) {
+      margin-left: 112px;
+    }
+    @media (max-width: 576px) {
+      margin-left: 0;
+      padding-left: 4.6%;
+    }
+    width: 50px;
+  }
+  .crafting_text {
+    position: absolute;
+    margin-left: 338px;
+    @media (max-width: 1366px) {
+      margin-left: 8rem;
+    }
+    @media (max-width: 1024px) {
+      margin-left: 112px;
+    }
+    @media (max-width: 576px) {
+      margin-left: 0;
+      padding-left: 4.6%;
+      width: 90%;
+    }
+    width: 528px;
+  }
+  .ideas_image {
+    margin-top: 6.5rem;
+    width: 100%;
+    @media (max-width: 576px) {
+      margin-top: 4rem;
+    }
+  }
+  .stitching_wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 350px;
+    @media (max-width: 1366px) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 7rem;
+    }
+    @media (max-width: 576px) {
+      padding-top: 12%;
+      padding-left: 4.6%;
+    }
+    .stitching_text {
+      padding: 0 3.2rem;
+      @media (max-width: 1366px) {
+        font-size: 31px;
+        padding: 0;
+        width: 100%;
+      }
+    }
+    .para {
+      width: 454px;
+      @media (max-width: 1366px) {
+        width: 95%;
+        padding: 0;
+        font-size: 20px;
+      }
+      padding: 0 3.2rem;
+    }
+    .breif_me {
+      font-family: "Roboto-LightItalic";
+      font-size: 20px;
+      text-decoration: underline;
+      padding: 0 6.2rem;
+      @media (max-width: 1366px) {
+        padding: 0;
+      }
+    }
+  }
+}

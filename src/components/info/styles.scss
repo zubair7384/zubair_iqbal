@@ -1,0 +1,27 @@
+.info_container {
+  .info_wrapper {
+    padding-top: 3rem;
+    padding-left: 16px;
+    @media (max-width: 768px) {
+      padding: 0 0 0 16px;
+    }
+    .address,
+    .number,
+    .email {
+      font-family: "Gilroy-Light";
+      font-style: normal;
+      font-size: 16px;
+      line-height: 86.19%;
+      margin: 14px 0;
+      @media (max-width: 576px) {
+        font-size: 10px;
+      }
+    }
+    .number {
+      font-family: "Gilroy-ExtraBold";
+    }
+    .email {
+      font-family: "Gilroy-ExtraBold";
+    }
+  }
+}

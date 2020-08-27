@@ -1,0 +1,18 @@
+.headingTwo {
+  font-family: "Gilroy-ExtraBold";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 110px;
+  line-height: 0.9;
+  margin: 0;
+  @media (max-width: 1024px) {
+    margin: 0 0 1rem 0;
+  }
+  @media (max-width: 768px) {
+    font-size: 88px;
+  }
+  @media (max-width: 576px) {
+    font-size: 70px;
+    width: 100%;
+  }
+}

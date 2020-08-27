@@ -1,0 +1,38 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+// Scss Global
+.flex {
+  &-ai-center {
+    align-items: center;
+  }
+  &-jc-center {
+    justify-content: center;
+  }
+  &-jc-start {
+    justify-content: flex-start;
+  }
+  &-jc-end {
+    justify-content: flex-end;
+  }
+}
+
+// Mixin scss
+// @mixin flex-center {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+// @mixin flex-x-center {
+//   display: flex;
+//   justify-content: center;
+// }
+// @mixin flex-y-center {
+//   display: flex;
+//   align-items: center;
+// }
+
+// Scss variables
