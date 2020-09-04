@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import Wallpaper from "../../assets/svgs/homebanner.svg"
+import Wallpaper from "../../assets/svgs/homebanner.jpg"
 import "./styles.scss"
 
 export default function HomeWallpaper() {
@@ -19,7 +19,7 @@ export default function HomeWallpaper() {
       id="t"
       style={
         hasWindow && window.innerWidth > 768
-          ? { transform: `translateY(-${offsetY * 0.4}px)` }
+          ? { transform: `translateY(-${offsetY * 0.5}px)` }
           : { transform: `translateY(-${offsetY * 0}px)` }
       }
     >

@@ -3,7 +3,7 @@ import H2 from "../h2"
 import H3 from "../h3"
 import P from "../p"
 import Line from "../../assets/svgs/line.svg"
-import Design from "../../assets/svgs/design.svg"
+import Design from "../../assets/svgs/design.jpg"
 // import WOW from "wowjs"
 import "./styles.scss"
 
