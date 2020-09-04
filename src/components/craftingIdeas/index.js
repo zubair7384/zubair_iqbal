@@ -6,6 +6,7 @@ import Line from "../../assets/svgs/line.svg"
 import Ideas from "../../assets/svgs/idea.svg"
 import IdeasMobile from "../../assets/svgs/ideaMobile.svg"
 import WOW from "wowjs"
+import window from "global"
 import "./styles.scss"
 
 export default class CraftingIdeas extends React.Component {

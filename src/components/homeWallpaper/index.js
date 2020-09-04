@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import Wallpaper from "../../assets/svgs/homebanner.svg"
-
+import window from "global"
 import "./styles.scss"
 
 export default function HomeWallpaper() {

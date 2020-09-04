@@ -6,6 +6,7 @@ import Twitter from "../../assets/svgs/twitter.svg"
 import Arrow from "../../assets/svgs/arrow.svg"
 import Scroll from "../../assets/svgs/scroll.svg"
 import Line from "../../assets/svgs/line.svg"
+import window from "global"
 import "animate.css"
 import "./styles.scss"
 

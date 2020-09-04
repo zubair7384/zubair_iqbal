@@ -5,6 +5,7 @@ import P from "../p"
 import Line from "../../assets/svgs/line.svg"
 import Design from "../../assets/svgs/design.svg"
 import WOW from "wowjs"
+import window from "global"
 import "./styles.scss"
 
 export default function InspireDesign() {

@@ -7,6 +7,7 @@ import Exit from "../../assets/svgs/exit.svg"
 import Twitter from "../../assets/svgs/twitter.svg"
 import Facebook from "../../assets/svgs/facebook.svg"
 import Instagram from "../../assets/svgs/instagram.svg"
+import window from "global"
 import "animate.css"
 
 import "./styles.scss"
