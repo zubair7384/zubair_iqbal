@@ -6,12 +6,16 @@
     display: flex;
     padding-left: 18rem;
     padding-top: 18rem;
+
     @media (max-width: 1024px) {
       padding-left: 8.5rem;
       padding-top: 14rem;
     }
     @media (max-width: 768px) {
       padding-left: 1rem;
+      img {
+        visibility: hidden;
+      }
     }
     @media (max-width: 576px) {
       padding-left: 0;
@@ -40,6 +44,10 @@
         line-height: 86.19%;
         @media (max-width: 768px) {
           margin-bottom: 0;
+        }
+        a {
+          color: #000;
+          text-decoration: none;
         }
       }
     }

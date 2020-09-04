@@ -82,6 +82,7 @@
   .translating_wrapper {
     width: 506px;
     margin-left: 250px;
+    margin-bottom: 44rem;
     @media (max-width: 1366px) {
       margin-left: 112px;
     }
@@ -104,6 +105,9 @@
       font-family: "Roboto-LightItalic";
       font-size: 20px;
       text-decoration: underline;
+      a {
+        color: #000;
+      }
     }
   }
 }

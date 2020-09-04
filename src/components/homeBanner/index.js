@@ -14,27 +14,23 @@ export default function HomeBanner() {
 
   const [goingUp, setGoingUp] = useState(false)
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const currentScrollY = typeof window !== "undefined" && window.scrollY
-  //     if (prevScrollY.current > currentScrollY && goingUp) {
-  //       setGoingUp(false)
-  //     }
-  //     if (prevScrollY.current < currentScrollY && !goingUp) {
-  //       setGoingUp(true)
-  //     }
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+      if (prevScrollY.current > currentScrollY && goingUp) {
+        setGoingUp(false)
+      }
+      if (prevScrollY.current < currentScrollY && !goingUp) {
+        setGoingUp(true)
+      }
 
-  //     prevScrollY.current = currentScrollY
-  //     console.log(goingUp, typeof window !== "undefined" && window.scrollY)
-  //   }
+      prevScrollY.current = currentScrollY
+    }
 
-  //   typeof window !== "undefined" &&
-  //     window.addEventListener("scroll", handleScroll, { passive: true })
+    window.addEventListener("scroll", handleScroll, { passive: true })
 
-  //   return () =>
-  //     typeof window !== "undefined" &&
-  //     window.removeEventListener("scroll", handleScroll)
-  // }, [goingUp])
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [goingUp])
   return (
     <div className="container">
       <div className="social_icons">
@@ -52,23 +48,97 @@ export default function HomeBanner() {
         ))}
       </div>
       <div
-      // className={`${
-      //   goingUp && typeof window !== "undefined" && window.scrollY > 1
-      //     ? "container_wrapper fixed"
-      //     : "container_wrapper"
-      // } ${
-      //   typeof window !== "undefined" && window.scrollY > 50
-      //     ? "container_wrapper relative"
-      //     : "container_wrapper"
-      // }`}
+        className={`${
+          goingUp && window.scrollY > 1
+            ? "container_wrapper fixed"
+            : "container_wrapper"
+        } ${
+          window.scrollY > 50
+            ? "container_wrapper relative"
+            : "container_wrapper"
+        }`}
       >
-        {/* <div className="first_row">
-          <img
-            src={Hello}
-            className={
-              goingUp ? "first_row_svg_scroll first_row_svg" : "first_row_svg"
-            }
-          />
+        <div className="first_row">
+          <svg
+            className="first_row_svg"
+            width="428"
+            height="343"
+            viewBox="0 0 428 343"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0)">
+              <path
+                d="M21.5732 0.0100098V151.625"
+                stroke="#1C1B20"
+                stroke-width="40.8963"
+              />
+              <path
+                d="M21.5732 73.8228H103.037"
+                stroke="#1C1B20"
+                stroke-width="40.8963"
+              />
+              <path
+                d="M103.037 0.0100098V151.625"
+                stroke="#1C1B20"
+                stroke-width="40.8963"
+              />
+              <path
+                d="M167.872 0.0100098V151.625"
+                stroke="#1C1B20"
+                stroke-width="40.8963"
+              />
+              <path
+                d="M167.872 19.4507H245.336"
+                stroke="#1C1B20"
+                stroke-width="40.8963"
+              />
+              <path
+                d="M167.872 75.8177H240.348"
+                stroke="#1C1B20"
+                stroke-width="40.8963"
+              />
+              <path
+                d="M167.872 131.167H245.336"
+                stroke="#1C1B20"
+                stroke-width="40.8963"
+              />
+              <path
+                d="M21.5732 186.208V337.823"
+                stroke="#1C1B20"
+                stroke-width="40.8963"
+              />
+              <path
+                d="M21.5732 317.365H94.0594"
+                stroke="#1C1B20"
+                stroke-width="40.8963"
+              />
+              <path
+                d="M128.302 186.208V337.823"
+                stroke="#1C1B20"
+                stroke-width="40.8963"
+              />
+              <path
+                d="M128.302 317.365H200.788"
+                stroke="#1C1B20"
+                stroke-width="40.8963"
+              />
+              <path
+                d="M282.92 322.552C316.348 322.552 343.447 295.453 343.447 262.025C343.447 228.598 316.348 201.499 282.92 201.499C249.492 201.499 222.394 228.598 222.394 262.025C222.394 295.453 249.492 322.552 282.92 322.552Z"
+                stroke="#1C1B20"
+                stroke-width="40.8963"
+              />
+              <path
+                d="M402.277 340.816C416.419 340.816 427.882 329.352 427.882 315.211C427.882 301.069 416.419 289.605 402.277 289.605C388.136 289.605 376.672 301.069 376.672 315.211C376.672 329.352 388.136 340.816 402.277 340.816Z"
+                fill="#3FBAC2"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0">
+                <rect width="428" height="343" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
           <div
             className={
               !goingUp ? "scroll_info_wrapper info_wrapper" : "info_wrapper"
@@ -82,7 +152,7 @@ export default function HomeBanner() {
               }
             >
               <img src={Line} />
-              <p className="dob">Born 1994</p>
+              <p className="dob">Born 1996</p>
             </span>
             <div
               className={
@@ -95,14 +165,14 @@ export default function HomeBanner() {
               <p>experienced in modern website technology & solutions.</p>
             </div>
           </div>
-          <div className="scroll_down">
+          <div className="scroll_down animate__animated animate__fadeInUp">
             <img src={Scroll} className="scroll" />
             <img src={Arrow} className="arrow" />
           </div>
         </div>
         <div
           className={`${goingUp ? "second_row scrolling" : "second_row"}`}
-        ></div> */}
+        ></div>
       </div>
     </div>
   )

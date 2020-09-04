@@ -54,7 +54,7 @@ body {
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      background: #ff5851;
+      background: #3fbac2;
       width: 100%;
       transition: opacity 1s ease-out;
 
@@ -62,6 +62,7 @@ body {
         margin-right: -14.8rem;
         z-index: 1;
         width: 480px;
+
         @media (max-width: 1024px) {
           margin-right: -11.5rem;
           width: 370px;
@@ -70,15 +71,30 @@ body {
           margin-right: -9.5rem;
           width: 300px;
         }
+        g {
+          path {
+            opacity: 10;
+            animation: animate 1.5s;
+          }
+          @keyframes animate {
+            0% {
+              stroke-dasharray: 0 50%;
+            }
+            100% {
+              stroke-dasharray: 50% 0;
+            }
+          }
+        }
       }
       .first_row_svg_scroll {
-        margin-right: -18rem;
+        margin-right: -17.5rem;
         transition: 1s;
       }
       .test {
         padding-top: 2rem;
       }
       .scroll_down {
+        z-index: 99;
         display: flex;
         flex-direction: column;
         position: absolute;
@@ -118,11 +134,10 @@ body {
           left: 103px;
         }
         @media (max-width: 576px) {
-          @media (max-width: 576px) {
-            width: 80%;
-            left: 44px;
-            font-size: 25px;
-          }
+          width: 80%;
+          left: 44px;
+          font-size: 25px;
+          margin-top: 11rem;
         }
         span {
           display: flex;

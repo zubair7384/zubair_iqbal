@@ -14,7 +14,11 @@ export default class BreifMe extends Component {
           <img src={RightArrow} className="right_arrow " />
           <div className="breif_wrapper">
             <p className="work_text">Want to work with me?</p>
-            <h2 className="breif_text">BRIEF ME</h2>
+            <h2 className="breif_text">
+              <a href="https://wa.me/0923448585803" target="_blank">
+                BRIEF ME
+              </a>
+            </h2>
           </div>
         </div>
       </div>

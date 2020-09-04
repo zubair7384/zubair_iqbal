@@ -8,7 +8,9 @@
     @media (max-width: 768px) {
       display: flex;
       flex-direction: column;
+      margin-left: 16px;
     }
+
     height: 300px;
     display: flex;
     justify-content: space-between;

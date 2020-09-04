@@ -1,0 +1,126 @@
+.right_tools_container {
+  width: 100%;
+  box-sizing: border-box;
+  height: 100vh;
+  padding: 0 2% 0 2%;
+  margin-top: -3rem;
+  @media (max-width: 1366px) {
+    padding: 0 2.5% 0 2.5%;
+  }
+  @media (max-width: 1024px) {
+    height: 100%;
+  }
+  @media (max-width: 768px) {
+    padding: 0;
+  }
+  .tools_row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f8f8f8;
+    height: 100vh;
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      height: 100%;
+    }
+    .tools_col {
+      width: 50%;
+      @media (max-width: 1024px) {
+        width: 88%;
+      }
+      @media (max-width: 576px) {
+        width: 100%;
+      }
+      .tools_wrapper {
+        .img {
+          width: 40px;
+          margin-bottom: 6px;
+          @media (max-width: 576px) {
+            width: 30px;
+          }
+        }
+        width: 62%;
+        margin: 0 auto;
+        @media (max-width: 1366px) {
+          width: 90%;
+        }
+        @media (max-width: 1024px) {
+          margin-top: 12rem;
+        }
+        @media (max-width: 768px) {
+          margin-top: 10rem;
+        }
+        @media (max-width: 576px) {
+          margin-top: 8rem;
+        }
+        .tools {
+          color: #ffb400;
+          font-family: "Gilroy-light";
+        }
+        .right_tools_heading {
+          margin-bottom: 5rem;
+          @media (max-width: 576px) {
+            font-size: 68px;
+            margin-bottom: 2rem;
+          }
+        }
+      }
+    }
+    .tools_boxes {
+      @media (max-width: 1024px) {
+        margin-bottom: 12rem;
+      }
+      @media (max-width: 768px) {
+        margin-bottom: 10rem;
+      }
+      @media (max-width: 576px) {
+        margin-bottom: 4rem;
+      }
+      .tools_col {
+        display: flex;
+        width: 50%;
+        @media (max-width: 1024px) {
+          width: 88%;
+        }
+        @media (max-width: 576px) {
+          width: 100%;
+        }
+        .boxes_wrapper {
+          display: flex;
+          @media (max-width: 1024px) {
+            margin-top: 5rem;
+          }
+          .box {
+            width: 229px;
+            height: 229px;
+            @media (max-width: 576px) {
+              width: 113px;
+              height: 113px;
+            }
+          }
+          .box_1 {
+            background: #51c0ff;
+          }
+          .box_2 {
+            background: #3fbac2;
+            margin-top: 9rem;
+            margin-left: -6rem;
+            @media (max-width: 576px) {
+              margin-top: 5rem;
+              margin-left: -2.5rem;
+            }
+          }
+          .box_3 {
+            background: #ffb400;
+            margin-top: 18.5rem;
+            margin-left: -5.5rem;
+            @media (max-width: 576px) {
+              margin-top: 10.2rem;
+              margin-left: -2.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

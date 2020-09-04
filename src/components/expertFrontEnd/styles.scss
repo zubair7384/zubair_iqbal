@@ -11,12 +11,13 @@
   src: url("../../assets/font/Roboto-Medium.ttf");
 }
 .front_end_container {
+  position: relative;
   height: 890px;
   background: #f8f8f8;
-  margin: -5px 2% 0 2%;
+  margin: -33rem 2% 0 2%;
   overflow: hidden;
   @media (max-width: 1366px) {
-    margin: -5px 2.5% 0 2.5%;
+    margin: -21rem 2.5% 0 2.5%;
   }
   @media (max-width: 768px) {
     display: flex;
@@ -34,7 +35,7 @@
   align-items: flex-end;
   .front_end_wrapper {
     width: 506px;
-    margin-bottom: 122px;
+    margin-bottom: 209px;
     margin-right: 140px;
     @media (max-width: 1366px) {
       margin-right: 40px;
@@ -68,13 +69,16 @@
       font-family: "Roboto-LightItalic";
       font-size: 20px;
       text-decoration: underline;
+      a {
+        color: #000;
+      }
     }
   }
   .solutions_wrapper {
     display: flex;
     align-items: center;
     width: 843px;
-    height: 466px;
+    height: 500px;
     @media (max-width: 1366px) {
       width: 792px;
       height: 410px;
@@ -84,7 +88,6 @@
       width: 100%;
       margin-bottom: 0;
     }
-    margin-bottom: 111px;
     background: #1c1b20;
     .row {
       display: flex;
