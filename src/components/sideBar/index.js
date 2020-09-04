@@ -7,9 +7,7 @@ import Exit from "../../assets/svgs/exit.svg"
 import Twitter from "../../assets/svgs/twitter.svg"
 import Facebook from "../../assets/svgs/facebook.svg"
 import Instagram from "../../assets/svgs/instagram.svg"
-import window from "global"
 import "animate.css"
-
 import "./styles.scss"
 
 const navLinks = [
@@ -29,15 +27,6 @@ const navLinks = [
   },
 ]
 
-const mySpecialWindowFunction = () => {
-  /* START HACK */
-  if (!process.env.BROWSER) {
-    global.window = {} // Temporarily define window for server-side
-  }
-  /* END HACK */
-
-  return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase())
-}
 export default class SideBar extends React.Component {
   constructor() {
     super()
@@ -66,13 +55,17 @@ export default class SideBar extends React.Component {
   }
 
   render(props) {
+    const hasWindow = typeof window !== "undefined" ? true : false
+
     if (this.state.menuStatus !== "open") {
-      window.onscroll = function () {
-        window.scrollTo(0, 0)
+      let ws = hasWindow && window.onscroll
+      ws = function () {
+        hasWindow && window.scrollTo(0, 0)
       }
     } else {
-      window.onscroll = function () {
-        window.scrollTo()
+      let wt = hasWindow && window.scrollTo
+      wt = function () {
+        hasWindow && window.scrollTo()
       }
     }
     return (
@@ -83,7 +76,7 @@ export default class SideBar extends React.Component {
       >
         <div
           className={
-            window.location.pathname === "/skills"
+            hasWindow && window.location.pathname === "/skills"
               ? "sidebar_background yellow"
               : "sidebar_background"
           }

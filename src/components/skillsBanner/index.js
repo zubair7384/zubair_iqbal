@@ -1,12 +1,12 @@
 import React, { useEffect } from "react"
 import Line from "../../assets/svgs/line.svg"
-import WOW from "wowjs"
+// import WOW from "wowjs"
 import "./styles.scss"
 
 export default function SkillsBanner() {
-  useEffect(() => {
-    new WOW.WOW().init()
-  }, [])
+  // useEffect(() => {
+  //   new WOW.WOW().init()
+  // }, [])
   return (
     <div className="skills_container">
       <div className="skills_container_wrapper">

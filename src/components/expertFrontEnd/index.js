@@ -4,20 +4,10 @@ import H3 from "../h3"
 import P from "../p"
 import Line from "../../assets/svgs/line.svg"
 import WhiteLine from "../../assets/svgs/white-line.svg"
-import WOW from "wowjs"
-import window from "global"
+// import WOW from "wowjs"
 import "./styles.scss"
 
 export default function ExpertFrontEnd() {
-  const mySpecialWindowFunction = () => {
-    /* START HACK */
-    if (!process.env.BROWSER) {
-      global.window = {} // Temporarily define window for server-side
-    }
-    /* END HACK */
-
-    return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase())
-  }
   const [offsetY, setOffsetY] = useState(0)
 
   const handleScroll = () => setOffsetY(window.pageYOffset)
@@ -27,16 +17,18 @@ export default function ExpertFrontEnd() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  useEffect(() => {
-    new WOW.WOW().init()
-  }, [])
+  // useEffect(() => {
+  //   new WOW.WOW().init()
+  // }, [])
+
+  const hasWindow = typeof window !== "undefined" ? true : false
 
   return (
     <div className="front_end_container">
       <div
         className="front_end_wrapper"
         style={
-          window.innerWidth > 768
+          hasWindow && window.innerWidth > 768
             ? { transform: `translateY(${offsetY * 0.07}px)` }
             : { transform: `translateY(${offsetY * 0}px)` }
         }
@@ -69,7 +61,7 @@ export default function ExpertFrontEnd() {
       <div
         className="solutions_wrapper "
         style={
-          window.innerWidth > 768
+          hasWindow && window.innerWidth > 768
             ? { transform: `translateY(-${offsetY * 0.1}px)` }
             : { transform: `translateY(-${offsetY * 0}px)` }
         }

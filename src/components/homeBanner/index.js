@@ -6,7 +6,6 @@ import Twitter from "../../assets/svgs/twitter.svg"
 import Arrow from "../../assets/svgs/arrow.svg"
 import Scroll from "../../assets/svgs/scroll.svg"
 import Line from "../../assets/svgs/line.svg"
-import window from "global"
 import "animate.css"
 import "./styles.scss"
 
@@ -14,10 +13,11 @@ export default function HomeBanner() {
   const prevScrollY = useRef(0)
 
   const [goingUp, setGoingUp] = useState(false)
+  const hasWindow = typeof window !== "undefined" ? true : false
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY
+      const currentScrollY = hasWindow && window.scrollY
       if (prevScrollY.current > currentScrollY && goingUp) {
         setGoingUp(false)
       }
@@ -28,20 +28,12 @@ export default function HomeBanner() {
       prevScrollY.current = currentScrollY
     }
 
-    window.addEventListener("scroll", handleScroll, { passive: true })
+    hasWindow &&
+      window.addEventListener("scroll", handleScroll, { passive: true })
 
-    return () => window.removeEventListener("scroll", handleScroll)
+    return () => hasWindow && window.removeEventListener("scroll", handleScroll)
   }, [goingUp])
 
-  const mySpecialWindowFunction = () => {
-    /* START HACK */
-    if (!process.env.BROWSER) {
-      global.window = {} // Temporarily define window for server-side
-    }
-    /* END HACK */
-
-    return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase())
-  }
   return (
     <div className="container">
       <div className="social_icons">
@@ -60,11 +52,11 @@ export default function HomeBanner() {
       </div>
       <div
         className={`${
-          goingUp && window.scrollY > 1
+          goingUp && hasWindow && window.scrollY > 1
             ? "container_wrapper fixed"
             : "container_wrapper"
         } ${
-          window.scrollY > 50
+          hasWindow && window.scrollY > 50
             ? "container_wrapper relative"
             : "container_wrapper"
         }`}

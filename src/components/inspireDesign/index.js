@@ -4,28 +4,18 @@ import H3 from "../h3"
 import P from "../p"
 import Line from "../../assets/svgs/line.svg"
 import Design from "../../assets/svgs/design.svg"
-import WOW from "wowjs"
-import window from "global"
+// import WOW from "wowjs"
 import "./styles.scss"
 
 export default function InspireDesign() {
-  const mySpecialWindowFunction = () => {
-    /* START HACK */
-    if (!process.env.BROWSER) {
-      global.window = {} // Temporarily define window for server-side
-    }
-    /* END HACK */
-
-    return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase())
-  }
   const [offsetY, setOffsetY] = useState(0)
-
-  const handleScroll = () => setOffsetY(window.pageYOffset)
+  const hasWindow = typeof window !== "undefined" ? true : false
+  const handleScroll = () => setOffsetY(hasWindow && window.pageYOffset)
   useEffect(() => {
-    new WOW.WOW().init()
-    window.addEventListener("scroll", handleScroll)
+    // new WOW.WOW().init()
+    hasWindow && window.addEventListener("scroll", handleScroll)
 
-    return () => window.removeEventListener("scroll", handleScroll)
+    return () => hasWindow && window.removeEventListener("scroll", handleScroll)
   }, [])
 
   return (
@@ -50,7 +40,7 @@ export default function InspireDesign() {
       <div
         className="translating_wrapper"
         style={
-          window.innerWidth > 768
+          hasWindow && window.innerWidth > 768
             ? { transform: `translateY(${offsetY * 0.2}px)` }
             : { transform: `translateY(${offsetY * 0}px)` }
         }

@@ -2,13 +2,13 @@ import React, { useEffect } from "react"
 import H2 from "../../components/h2"
 import Line from "../../assets/svgs/line.svg"
 import Tools from "../../assets/svgs/tools.svg"
-import WOW from "wowjs"
+// import WOW from "wowjs"
 import "./styles.scss"
 
 export default function Skills() {
-  useEffect(() => {
-    new WOW.WOW().init()
-  }, [])
+  // useEffect(() => {
+  //   new WOW.WOW().init()
+  // }, [])
   return (
     <div className="skills_container">
       <div className="skills_row">

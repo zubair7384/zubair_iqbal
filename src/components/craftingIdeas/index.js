@@ -5,30 +5,21 @@ import P from "../p"
 import Line from "../../assets/svgs/line.svg"
 import Ideas from "../../assets/svgs/idea.svg"
 import IdeasMobile from "../../assets/svgs/ideaMobile.svg"
-import WOW from "wowjs"
-import window from "global"
+// import WOW from "wowjs"
 import "./styles.scss"
 
-const mySpecialWindowFunction = () => {
-  /* START HACK */
-  if (!process.env.BROWSER) {
-    global.window = {} // Temporarily define window for server-side
-  }
-  /* END HACK */
-
-  return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase())
-}
 export default class CraftingIdeas extends React.Component {
-  componentDidMount() {
-    new WOW.WOW().init()
-  }
+  // componentDidMount() {
+  //   new WOW.WOW().init()
+  // }
 
   render() {
+    const hasWindow = typeof window !== "undefined" ? true : false
     return (
       <div className="crafting_container">
         <img className="wow fadeInLeft crafting_line" src={Line} alt="line" />
         <H2 heading="CRAFTING ideas." className="crafting_text wow fadeInUp" />
-        {window.screen.width < 576 ? (
+        {hasWindow && window.screen.width < 576 ? (
           <img className="ideas_image" src={IdeasMobile} alt="ideas" />
         ) : (
           <img className="ideas_image" src={Ideas} alt="ideas" />
