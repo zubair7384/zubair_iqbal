@@ -29,17 +29,16 @@ const navLinks = [
   },
 ]
 
-export default class SideBar extends React.Component {
-  const mySpecialWindowFunction = () => {
+const mySpecialWindowFunction = () => {
+  /* START HACK */
+  if (!process.env.BROWSER) {
+    global.window = {} // Temporarily define window for server-side
+  }
+  /* END HACK */
 
-    /* START HACK */
-    if (!process.env.BROWSER) {
-      global.window = {}; // Temporarily define window for server-side
-    }
-    /* END HACK */
-  
-    return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase());
-  };
+  return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase())
+}
+export default class SideBar extends React.Component {
   constructor() {
     super()
     this.state = {
