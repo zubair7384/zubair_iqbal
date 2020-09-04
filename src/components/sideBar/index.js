@@ -30,6 +30,16 @@ const navLinks = [
 ]
 
 export default class SideBar extends React.Component {
+  const mySpecialWindowFunction = () => {
+
+    /* START HACK */
+    if (!process.env.BROWSER) {
+      global.window = {}; // Temporarily define window for server-side
+    }
+    /* END HACK */
+  
+    return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase());
+  };
   constructor() {
     super()
     this.state = {

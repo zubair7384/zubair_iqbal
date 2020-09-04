@@ -32,6 +32,16 @@ export default function HomeBanner() {
 
     return () => window.removeEventListener("scroll", handleScroll)
   }, [goingUp])
+
+  const mySpecialWindowFunction = () => {
+    /* START HACK */
+    if (!process.env.BROWSER) {
+      global.window = {} // Temporarily define window for server-side
+    }
+    /* END HACK */
+
+    return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase())
+  }
   return (
     <div className="container">
       <div className="social_icons">

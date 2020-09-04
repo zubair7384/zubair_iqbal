@@ -9,6 +9,15 @@ import WOW from "wowjs"
 import window from "global"
 import "./styles.scss"
 
+const mySpecialWindowFunction = () => {
+  /* START HACK */
+  if (!process.env.BROWSER) {
+    global.window = {} // Temporarily define window for server-side
+  }
+  /* END HACK */
+
+  return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase())
+}
 export default class CraftingIdeas extends React.Component {
   componentDidMount() {
     new WOW.WOW().init()

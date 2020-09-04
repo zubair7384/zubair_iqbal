@@ -9,6 +9,15 @@ import window from "global"
 import "./styles.scss"
 
 export default function InspireDesign() {
+  const mySpecialWindowFunction = () => {
+    /* START HACK */
+    if (!process.env.BROWSER) {
+      global.window = {} // Temporarily define window for server-side
+    }
+    /* END HACK */
+
+    return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase())
+  }
   const [offsetY, setOffsetY] = useState(0)
 
   const handleScroll = () => setOffsetY(window.pageYOffset)
