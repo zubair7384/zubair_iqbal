@@ -5,13 +5,13 @@ import P from "../p"
 import Line from "../../assets/svgs/line.svg"
 import Ideas from "../../assets/svgs/idea.jpg"
 import IdeasMobile from "../../assets/svgs/ideaMobile.jpg"
-// import WOW from "wowjs"
+import WOW from "wowjs"
 import "./styles.scss"
 
 export default class CraftingIdeas extends React.Component {
-  // componentDidMount() {
-  //   new WOW.WOW().init()
-  // }
+  componentDidMount() {
+    new WOW.WOW().init()
+  }
 
   render() {
     const hasWindow = typeof window !== "undefined" ? true : false

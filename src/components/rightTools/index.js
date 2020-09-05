@@ -2,13 +2,13 @@ import React, { useEffect } from "react"
 import H2 from "../../components/h2"
 import Line from "../../assets/svgs/line.svg"
 import P from "../../components/p"
-// import WOW from "wowjs"
+import WOW from "wowjs"
 import "./styles.scss"
 
 export default function RightTools() {
-  // useEffect(() => {
-  //   new WOW.WOW().init()
-  // }, [])
+  useEffect(() => {
+    new WOW.WOW().init()
+  }, [])
 
   return (
     <div className="right_tools_container">

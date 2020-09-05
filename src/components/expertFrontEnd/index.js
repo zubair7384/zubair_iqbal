@@ -4,7 +4,7 @@ import H3 from "../h3"
 import P from "../p"
 import Line from "../../assets/svgs/line.svg"
 import WhiteLine from "../../assets/svgs/white-line.svg"
-// import WOW from "wowjs"
+import WOW from "wowjs"
 import "./styles.scss"
 
 export default function ExpertFrontEnd() {
@@ -17,9 +17,9 @@ export default function ExpertFrontEnd() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  // useEffect(() => {
-  //   new WOW.WOW().init()
-  // }, [])
+  useEffect(() => {
+    new WOW.WOW().init()
+  }, [])
 
   const hasWindow = typeof window !== "undefined" ? true : false
 
