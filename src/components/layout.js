@@ -5,16 +5,22 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
+import Loader from "../components/loader"
 import Menu from "./sideBar"
 import Header from "./header"
 import Footer from "./footer"
 import "./layout.scss"
 
 const Layout = ({ children }) => {
+  const [loading, setLoading] = useState(true)
+  useEffect(() => {
+    // setTimeout(() => {
+    setLoading(false)
+    // }, 3000)
+  }, [])
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -27,17 +33,18 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Menu />
-      <Header />
-      <div>
-        <main>{children}</main>
-        {/* <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer> */}
-      </div>
-      <Footer />
+      {loading ? (
+        <Loader />
+      ) : (
+        <div>
+          <Menu />
+          <Header />
+          <div>
+            <main>{children}</main>
+          </div>
+          <Footer />
+        </div>
+      )}
     </>
   )
 }

@@ -7,7 +7,7 @@ import HomeWallpaper from "../components/homeWallpaper"
 import ExpertFrontEnd from "../components/expertFrontEnd"
 import InspireDesign from "../components/inspireDesign"
 import CraftingIdeas from "../components/craftingIdeas"
-import Loader from "../components/loader"
+// import Loader from "../components/loader"
 // import Image from "../components/image"
 // import SEO from "../components/seo"
 
@@ -18,7 +18,7 @@ const IndexPage = () => (
     <ExpertFrontEnd />
     <InspireDesign />
     <CraftingIdeas />
-    <Loader />
+    {/* <Loader /> */}
     {/* <SEO title="Home" />
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>

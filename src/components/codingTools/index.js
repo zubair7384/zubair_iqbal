@@ -31,7 +31,7 @@ export default function Skills() {
                 Coding.
               </h3>
               {[
-                "javaScript",
+                "JavaScript",
                 "Typescript",
                 "HTML5",
                 "CSS3",
