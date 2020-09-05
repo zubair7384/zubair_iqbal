@@ -91,6 +91,9 @@
       font-size: 20px;
       text-decoration: underline;
       padding: 0 6.2rem;
+      a {
+        color: #000;
+      }
       @media (max-width: 1366px) {
         padding: 0;
       }

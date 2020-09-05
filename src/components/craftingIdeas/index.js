@@ -56,7 +56,9 @@ export default class CraftingIdeas extends React.Component {
               para="Create a great frontend for your web apps or websites in some of the latest JavaScript based fronend web framworks."
             />
             <span data-aos="fade-up" className="breif_me">
-              Breif Me
+              <a href="https://wa.me/0923448585803" target="_blank">
+                Breif Me
+              </a>
             </span>
           </div>
         </div>
