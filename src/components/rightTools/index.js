@@ -2,16 +2,15 @@ import React, { useEffect } from "react"
 import H2 from "../../components/h2"
 import Line from "../../assets/svgs/line.svg"
 import P from "../../components/p"
-import WOW from "wowjs"
+import AOS from "aos"
+import "aos/dist/aos.css"
 import "./styles.scss"
 
 export default function RightTools() {
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.WOW = require("wowjs")
-    }
-
-    new WOW.WOW().init()
+    AOS.init({
+      duration: 2000,
+    })
   }, [])
 
   return (
@@ -19,9 +18,10 @@ export default function RightTools() {
       <div className="tools_row">
         <div className="tools_col">
           <div className="tools_wrapper">
-            <img className="img wow fadeInLeft" src={Line} ali="line" />
+            <img data-aos="fade-left" className="img" src={Line} ali="line" />
             <H2
-              headingClass="right_tools_heading wow fadeInUp"
+              dataAos="fade-up"
+              headingClass="right_tools_heading"
               spanClassName="tools"
               heading="EQUIPPED right"
               headingTwo=" tools."
@@ -35,16 +35,19 @@ export default function RightTools() {
           <div className="tools_col">
             <div className="boxes_wrapper">
               <div
-                className="box_1 box wow heartBeat"
-                data-wow-duration="1s"
+                data-aos="zoom-out"
+                className="box_1 box"
+                data-aos-duration="1s"
               ></div>
               <div
-                className="box_2 box wow heartBeat"
-                data-wow-duration="1.5s"
+                data-aos="zoom-in"
+                className="box_2 box"
+                data-aos-duration="1.5s"
               ></div>
               <div
-                className="box_3 box wow heartBeat"
-                data-wow-duration="2s"
+                data-aos="zoom-out"
+                className="box_3 box"
+                data-aos-duration="2s"
               ></div>
             </div>
           </div>

@@ -1,26 +1,25 @@
 import React, { useEffect } from "react"
 import Line from "../../assets/svgs/line.svg"
-import WOW from "wowjs"
+import AOS from "aos"
+import "aos/dist/aos.css"
 import "./styles.scss"
 
 export default function SkillsBanner() {
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.WOW = require("wowjs")
-    }
-
-    new WOW.WOW().init()
+    AOS.init({
+      duration: 2000,
+    })
   }, [])
   return (
     <div className="skills_container">
       <div className="skills_container_wrapper">
         <div className="skills_first">
-          <h1 className="skills_text wow fadeInDown" data-wow-duration="1.5s">
+          <h1 data-aos="fade-down" className="skills_text">
             Skills.
           </h1>
         </div>
         <div className="skills_last">
-          <div className="info_wrapper wow fadeInUp" data-wow-duration="1.5s">
+          <div data-aos="fade-up" className="info_wrapper">
             <span>
               <img src={Line} />
               <p className="dob">JavaScript.</p>

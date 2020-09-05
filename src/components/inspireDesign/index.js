@@ -4,7 +4,8 @@ import H3 from "../h3"
 import P from "../p"
 import Line from "../../assets/svgs/line.svg"
 import Design from "../../assets/svgs/design.jpg"
-import WOW from "wowjs"
+import AOS from "aos"
+import "aos/dist/aos.css"
 import "./styles.scss"
 
 export default function InspireDesign() {
@@ -12,11 +13,9 @@ export default function InspireDesign() {
   const hasWindow = typeof window !== "undefined" ? true : false
   const handleScroll = () => setOffsetY(hasWindow && window.pageYOffset)
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.WOW = require("wowjs")
-    }
-
-    new WOW.WOW().init()
+    AOS.init({
+      duration: 2000,
+    })
     hasWindow && window.addEventListener("scroll", handleScroll)
 
     return () => hasWindow && window.removeEventListener("scroll", handleScroll)
@@ -27,15 +26,21 @@ export default function InspireDesign() {
       <div className="inspire_wrapper">
         <div className="text_wrapper">
           <img
+            data-aos="fade-right"
             className="img animate__animated animate__fadeInLeft"
             src={Line}
             ali="line"
           />
-          <H2 className="inspire_text wow fadeInUp" heading="INSPIRE design." />
+          <H2
+            dataAos="fade-up"
+            className="inspire_text"
+            heading="INSPIRE design."
+          />
         </div>
         <div className="inspire_image_wrapper">
           <img
-            className="inspire_image wow fadeInLeft"
+            data-aos="fade-right"
+            className="inspire_image"
             src={Design}
             alt="design"
           />
@@ -50,7 +55,7 @@ export default function InspireDesign() {
         }
       >
         <H3
-          className="wow fadeInUp"
+          dataAos="fade-up"
           headingOne="Translating"
           headingTwo="inspiring"
           headingThree="designs."

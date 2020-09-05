@@ -4,7 +4,9 @@ import H3 from "../h3"
 import P from "../p"
 import Line from "../../assets/svgs/line.svg"
 import WhiteLine from "../../assets/svgs/white-line.svg"
-import WOW from "wowjs"
+import AOS from "aos"
+import "aos/dist/aos.css"
+
 import "./styles.scss"
 
 export default function ExpertFrontEnd() {
@@ -18,12 +20,10 @@ export default function ExpertFrontEnd() {
   }, [])
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.WOW = require("wowjs")
-    }
-
-    new WOW.WOW().init()
-  }, [])
+    AOS.init({
+      duration: 2000,
+    })
+  })
 
   const hasWindow = typeof window !== "undefined" ? true : false
 
@@ -37,10 +37,11 @@ export default function ExpertFrontEnd() {
             : { transform: `translateY(${offsetY * 0}px)` }
         }
       >
-        <img className="wow fadeInLeft" src={Line} />
-        <H2 className="wow fadeInUp front_text" heading="FRONT END." />
+        <img data-aos="fade-left" src={Line} />
+        <H2 dataAos="fade-up" className="front_text" heading="FRONT END." />
         <H3
-          className="wow fadeInUp headingThree_wrapper"
+          dataAos="fade-up"
+          className="headingThree_wrapper"
           headingOne="Expert in"
           headingTwo="frontend"
           headingThree="solutions."
@@ -63,7 +64,7 @@ export default function ExpertFrontEnd() {
         </span>
       </div>
       <div
-        className="solutions_wrapper "
+        className="solutions_wrapper"
         style={
           hasWindow && window.innerWidth > 768
             ? { transform: `translateY(-${offsetY * 0.1}px)` }
