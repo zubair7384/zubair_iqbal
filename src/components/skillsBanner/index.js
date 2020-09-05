@@ -5,6 +5,10 @@ import "./styles.scss"
 
 export default function SkillsBanner() {
   useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.WOW = require("wowjs")
+    }
+
     new WOW.WOW().init()
   }, [])
   return (

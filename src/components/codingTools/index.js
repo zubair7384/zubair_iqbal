@@ -7,6 +7,10 @@ import "./styles.scss"
 
 export default function Skills() {
   useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.WOW = require("wowjs")
+    }
+
     new WOW.WOW().init()
   }, [])
   return (

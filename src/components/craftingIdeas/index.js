@@ -10,6 +10,10 @@ import "./styles.scss"
 
 export default class CraftingIdeas extends React.Component {
   componentDidMount() {
+    if (typeof window !== "undefined") {
+      window.WOW = require("wowjs")
+    }
+
     new WOW.WOW().init()
   }
 

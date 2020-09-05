@@ -4,7 +4,7 @@ import H3 from "../h3"
 import P from "../p"
 import Line from "../../assets/svgs/line.svg"
 import Design from "../../assets/svgs/design.jpg"
-// import WOW from "wowjs"
+import WOW from "wowjs"
 import "./styles.scss"
 
 export default function InspireDesign() {
@@ -12,7 +12,11 @@ export default function InspireDesign() {
   const hasWindow = typeof window !== "undefined" ? true : false
   const handleScroll = () => setOffsetY(hasWindow && window.pageYOffset)
   useEffect(() => {
-    // new WOW.WOW().init()
+    if (typeof window !== "undefined") {
+      window.WOW = require("wowjs")
+    }
+
+    new WOW.WOW().init()
     hasWindow && window.addEventListener("scroll", handleScroll)
 
     return () => hasWindow && window.removeEventListener("scroll", handleScroll)
