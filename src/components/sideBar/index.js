@@ -11,7 +11,7 @@ import "animate.css"
 import "./styles.scss"
 
 const navLinks = [
-  { link: "skills", name: "Skills.", className: "skills" },
+  { link: "/skills", name: "Skills.", className: "skills" },
   { link: "/", name: "Home.", className: "home" },
   {
     link: "https://github.com/zubair7384",
