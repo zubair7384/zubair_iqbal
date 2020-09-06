@@ -17,9 +17,9 @@ import "./layout.scss"
 const Layout = ({ children }) => {
   const [loading, setLoading] = useState(true)
   useEffect(() => {
-    // setTimeout(() => {
-    // }, 5000)
-    setLoading(false)
+    setTimeout(() => {
+      setLoading(false)
+    }, 6000)
   }, [])
 
   const data = useStaticQuery(graphql`
@@ -33,11 +33,11 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div>
+    <div onload={console.log("loading completed")}>
       {loading ? (
         <Loader />
       ) : (
-        <div onload={alert("asdasd")}>
+        <div>
           <Menu />
           <Header />
           <div>
