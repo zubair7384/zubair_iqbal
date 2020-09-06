@@ -1,7 +1,7 @@
 .right_tools_container {
   width: 100%;
   box-sizing: border-box;
-  height: 100vh;
+  height: 100%;
   padding: 0 2% 0 2%;
   margin-top: -3rem;
   @media (max-width: 1366px) {
@@ -19,6 +19,9 @@
     align-items: center;
     background: #f8f8f8;
     height: 100vh;
+    @media (max-width: 1366px) {
+      height: 130vh;
+    }
     @media (max-width: 1024px) {
       flex-direction: column;
       height: 100%;

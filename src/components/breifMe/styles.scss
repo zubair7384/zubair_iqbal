@@ -7,6 +7,9 @@
     padding-left: 18rem;
     padding-top: 18rem;
 
+    @media (max-width: 1366px) {
+      padding-top: 10rem;
+    }
     @media (max-width: 1024px) {
       padding-left: 8.5rem;
       padding-top: 14rem;

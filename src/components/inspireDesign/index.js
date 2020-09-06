@@ -48,6 +48,7 @@ export default function InspireDesign() {
       </div>
       <div
         className="translating_wrapper"
+        data-aos="fade-left"
         style={
           hasWindow && window.innerWidth > 768
             ? { transform: `translateY(${offsetY * 0.2}px)` }
@@ -55,7 +56,6 @@ export default function InspireDesign() {
         }
       >
         <H3
-          dataAos="fade-up"
           headingOne="Translating"
           headingTwo="inspiring"
           headingThree="designs."
@@ -68,7 +68,7 @@ export default function InspireDesign() {
           className="paragraph"
           para="I fully understand the process of UX design that helps me to accurately bring those designs into life. "
         />
-        <span className="my_skills">
+        <span className="my_skills" data-aos="fade-up">
           <a href="https://github.com/zubair7384" target="_blank">
             My Work
           </a>

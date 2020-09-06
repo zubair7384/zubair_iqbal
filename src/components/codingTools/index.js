@@ -26,7 +26,12 @@ export default function Skills() {
         </div>
         <div className="tools_row">
           <div className="image_col">
-            <img className="tools_image" src={Tools} alt="tools" />
+            <img
+              data-aos="zoom-in"
+              className="tools_image"
+              src={Tools}
+              alt="tools"
+            />
           </div>
           <div className="skills_col">
             <div>

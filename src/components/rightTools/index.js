@@ -26,9 +26,15 @@ export default function RightTools() {
               heading="EQUIPPED right"
               headingTwo=" tools."
             />
-            <P para="I’m quipped with the right tools to create some of the best, visually attractive user interfaces. My core expertise starts with JavaScript proficiency and extends to some of the most popular frontend frameworks. " />
-            <P para="In order to inject a holistic, best possible user experience to my projects, I’ve acquired substaintial experience in a variety of UI & animation libraries." />
-            <P para="Attention to detail is my forte. " />
+            <P
+              dataAos="fade-up"
+              para="I’m quipped with the right tools to create some of the best, visually attractive user interfaces. My core expertise starts with JavaScript proficiency and extends to some of the most popular frontend frameworks. "
+            />
+            <P
+              dataAos="fade-up"
+              para="In order to inject a holistic, best possible user experience to my projects, I’ve acquired substaintial experience in a variety of UI & animation libraries."
+            />
+            <P dataAos="fade-up" para="Attention to detail is my forte. " />
           </div>
         </div>
         <div className="tools_boxes">

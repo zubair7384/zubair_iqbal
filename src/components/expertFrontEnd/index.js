@@ -47,17 +47,19 @@ export default function ExpertFrontEnd() {
           headingThree="solutions."
         />
         <P
+          dataAos="fade-up"
           className="para_wrapper"
           para="I believe in creating the best frontend user experiences by
             leveraging the cutting edge tech available. I have a keen eye for
             engineering the perfect user interfaces."
         />
         <P
+          dataAos="fade-up"
           className="para_wrapper"
           para="So far, I’ve worked on some of the most challenging problems in
             creating modern fronend solutions."
         />
-        <span className="my_skills">
+        <span className="my_skills" data-aos="fade-left">
           <a href="https://github.com/zubair7384" target="_blank">
             My Skills
           </a>
@@ -90,7 +92,7 @@ export default function ExpertFrontEnd() {
               para: " Forward looking with constant skill development. ",
             },
           ].map(({ title, para }) => (
-            <div className="solutions">
+            <div className="solutions" data-aos="fade-left">
               <img src={WhiteLine} />
               <h3 className="title">{title}</h3>
               <p className="para"> {para}</p>
