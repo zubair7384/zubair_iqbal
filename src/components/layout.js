@@ -37,7 +37,7 @@ const Layout = ({ children }) => {
       {loading ? (
         <Loader />
       ) : (
-        <div onload={() => setLoading(false)}>
+        <div onload={alert("asdasd")}>
           <Menu />
           <Header />
           <div>
