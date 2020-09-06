@@ -18,9 +18,10 @@ const Layout = ({ children }) => {
   const [loading, setLoading] = useState(true)
   useEffect(() => {
     // setTimeout(() => {
-    setLoading(false)
     // }, 5000)
+    setLoading(false)
   }, [])
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -32,11 +33,11 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <div>
       {loading ? (
         <Loader />
       ) : (
-        <div>
+        <div onload={() => setLoading(false)}>
           <Menu />
           <Header />
           <div>
@@ -45,7 +46,7 @@ const Layout = ({ children }) => {
           <Footer />
         </div>
       )}
-    </>
+    </div>
   )
 }
 

@@ -63,6 +63,10 @@ body {
         z-index: 1;
         width: 480px;
 
+        @media (max-width: 1341px) {
+          margin-right: -11.5rem;
+          width: 372px;
+        }
         @media (max-width: 1024px) {
           margin-right: -11.5rem;
           width: 370px;
@@ -123,6 +127,9 @@ body {
         @media (max-width: 1366px) {
           width: 50%;
           left: 270px;
+        }
+        @media (max-width: 1341px) {
+          top: 45%;
         }
         @media (max-width: 1024px) {
           width: 55%;
