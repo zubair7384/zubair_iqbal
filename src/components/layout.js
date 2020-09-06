@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false)
-    }, 6000)
+    }, 3000)
   }, [])
 
   const data = useStaticQuery(graphql`
