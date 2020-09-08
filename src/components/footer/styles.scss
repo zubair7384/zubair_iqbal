@@ -33,14 +33,12 @@
       }
     }
     .footer_logo {
-      margin-bottom: 2rem;
       margin-right: 3%;
-      width: 70px;
-      @media (max-width: 768px) {
-        margin-right: 85%;
-      }
+      width: 50px;
       @media (max-width: 768px) {
         margin-right: 67%;
+        padding-left: 19px;
+        padding-bottom: 19px;
       }
     }
   }

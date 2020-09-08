@@ -106,6 +106,9 @@
       @media (max-width: 1366px) {
         padding: 0 2rem;
       }
+      @media (max-width: 576px) {
+        padding-left: 0;
+      }
     }
   }
 }

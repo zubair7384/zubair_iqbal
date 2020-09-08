@@ -20,7 +20,7 @@
     @media (max-width: 768px) {
       padding-left: 1rem;
       img {
-        visibility: hidden;
+        display: none;
       }
     }
     @media (max-width: 576px) {
@@ -31,6 +31,12 @@
       @media (max-width: 1024px) {
         padding-top: 1rem;
         padding-left: 2.5rem;
+      }
+      @media (max-width: 768px) {
+        padding-left: 19px;
+      }
+      @media (max-width: 576px) {
+        padding-left: 0;
       }
 
       .work_text {
