@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #3fbac2;
+  background: #1ee0cd;
 }
 
 .boxes {
@@ -80,12 +80,12 @@
   background: #edf65c;
 }
 .boxes .box > div:nth-child(2) {
-  background: #145af2;
+  background: #575757;
   right: 0;
   --rotateY: 90deg;
 }
 .boxes .box > div:nth-child(3) {
-  background: #447cf5;
+  background: #747474;
   --rotateX: -90deg;
 }
 .boxes .box > div:nth-child(4) {

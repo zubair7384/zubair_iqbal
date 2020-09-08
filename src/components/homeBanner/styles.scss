@@ -54,7 +54,7 @@ body {
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      background: #3fbac2;
+      background: #1ee0cd;
       width: 100%;
       transition: opacity 1s ease-out;
 
@@ -186,11 +186,6 @@ body {
       width: 0%;
       transition: 1s;
     }
-  }
-  .fixed {
-    // position: fixed;
-    // width: 96%;
-    // transition: 2s;
   }
   .relative {
     position: relative;

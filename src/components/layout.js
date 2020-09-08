@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div onload={console.log("loading completed")}>
+    <div>
       {loading ? (
         <Loader />
       ) : (
