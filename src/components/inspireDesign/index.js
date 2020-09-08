@@ -37,9 +37,11 @@ export default function InspireDesign() {
             heading="INSPIRE design."
           />
         </div>
-        <div data-aos="fade-left" className="inspire_image_wrapper">
+        <div className="inspire_image_wrapper">
           <img
-            data-aos="fade-left"
+            data-aos={
+              hasWindow && window.innerWidth > 576 ? "fade-right" : "fade-up"
+            }
             className="inspire_image"
             src={Design}
             alt="design"
