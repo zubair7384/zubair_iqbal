@@ -1,6 +1,6 @@
 import React from "react"
 import BreifMe from "../breifMe"
-import Logo from "../../assets/svgs/zubair.svg"
+import Icon from "../../images/icon.svg"
 import Info from "../info"
 import "./styles.scss"
 
@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="footer_wrapper">
         <BreifMe className="breif" />
         <Info className="info" />
-        <img className="footer_logo" src={Logo} alt="zubair-logo" />
+        <img className="footer_logo" src={Icon} alt="zubair-logo" />
       </div>
       <div className="footer_border"></div>
     </div>

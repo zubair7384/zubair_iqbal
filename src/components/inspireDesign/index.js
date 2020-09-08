@@ -37,9 +37,9 @@ export default function InspireDesign() {
             heading="INSPIRE design."
           />
         </div>
-        <div className="inspire_image_wrapper">
+        <div data-aos="fade-left" className="inspire_image_wrapper">
           <img
-            data-aos="fade-right"
+            data-aos="fade-left"
             className="inspire_image"
             src={Design}
             alt="design"
