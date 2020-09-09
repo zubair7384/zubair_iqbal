@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import H2 from "../../components/h2"
 import Line from "../../assets/svgs/line.svg"
-import Tools from "../../assets/svgs/tools.png"
+import Tools from "../../assets/svgs/tools.svg"
 import AOS from "aos"
 import "aos/dist/aos.css"
 import "./styles.scss"
