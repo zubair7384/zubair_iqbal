@@ -1,6 +1,6 @@
 import React from "react"
 import BreifMe from "../breifMe"
-import Icon from "../../images/icon.svg"
+import Icon from "../../assets/svgs/footerLogo.svg"
 import Info from "../info"
 import "./styles.scss"
 

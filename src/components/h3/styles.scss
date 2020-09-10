@@ -5,6 +5,9 @@ h3 {
   font-size: 35px;
   line-height: 121.19%;
   margin-bottom: 1rem;
+  @media (max-width: 768px) {
+    // margin-top: 3rem;
+  }
   span {
     font-family: "Gilroy-ExtraBold";
     color: #1ee0cd;

@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("../../assets/font/Roboto-Light.ttf");
+}
+.container_button {
+  .button {
+    border-radius: 50px;
+    padding: 12px 24px;
+    background: transparent;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid #000;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    margin-top: 2rem;
+    @media (max-width: 768px) {
+      margin-top: 0;
+    }
+
+    &:hover {
+      background: #1ee0cd;
+      border: 1px solid #1ee0cd;
+      a {
+        color: #fff;
+      }
+    }
+    a {
+      font-family: "Roboto-Light";
+      line-height: 119.69%;
+      font-size: normal;
+      letter-spacing: 1px;
+      text-decoration: none;
+      color: #000;
+    }
+  }
+}

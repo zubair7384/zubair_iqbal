@@ -2,6 +2,7 @@ import React from "react"
 import H2 from "../h2"
 import H3 from "../h3"
 import P from "../p"
+import Button from "../button"
 import Line from "../../assets/svgs/line.svg"
 import Ideas from "../../assets/svgs/idea.jpg"
 import IdeasMobile from "../../assets/svgs/ideaMobile.jpg"
@@ -49,17 +50,15 @@ export default class CraftingIdeas extends React.Component {
             className="para"
             para="Turn your ideas into reality. Let me help you stitch your ideas together, creating your design into perfect frontend user interfaces. "
           />
-          <div>
+          <div className="last_para_wrapper">
             <P
               dataAos="fade-up"
               className="para "
               para="Create a great frontend for your web apps or websites in some of the latest JavaScript based fronend web framworks."
             />
-            <span data-aos="fade-up" className="breif_me">
-              <a href="https://wa.me/0923448585803" target="_blank">
-                Breif Me
-              </a>
-            </span>
+            <div data-aos="fade-up" className="breif_me">
+              <Button text="Breif Me" href="https://wa.me/0923448585803" />
+            </div>
           </div>
         </div>
       </div>

@@ -29,8 +29,12 @@
     @media (max-width: 1024px) {
       align-items: flex-start;
     }
+    @media (max-width: 768px) {
+      padding-top: 2rem;
+    }
     @media (max-width: 576px) {
       width: 90%;
+      padding-top: 0;
     }
     .img {
       width: 50px;
@@ -105,9 +109,6 @@
       font-family: "Roboto-LightItalic";
       font-size: 20px;
       text-decoration: underline;
-      a {
-        color: #000;
-      }
     }
   }
 }

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import H2 from "../h2"
 import H3 from "../h3"
 import P from "../p"
+import Button from "../button"
 import Line from "../../assets/svgs/line.svg"
 import WhiteLine from "../../assets/svgs/white-line.svg"
 import AOS from "aos"
@@ -60,9 +61,7 @@ export default function ExpertFrontEnd() {
             creating modern fronend solutions."
         />
         <span className="my_skills" data-aos="fade-left">
-          <a href="https://github.com/zubair7384" target="_blank">
-            My Skills
-          </a>
+          <Button text="My Skills" href="https://github.com/zubair7384" />
         </span>
       </div>
       <div

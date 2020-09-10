@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import H2 from "../h2"
 import H3 from "../h3"
 import P from "../p"
+import Button from "../button"
 import Line from "../../assets/svgs/line.svg"
 import Design from "../../assets/svgs/design.jpg"
 import AOS from "aos"
@@ -71,9 +72,7 @@ export default function InspireDesign() {
           para="I fully understand the process of UX design that helps me to accurately bring those designs into life. "
         />
         <span className="my_skills" data-aos="fade-up">
-          <a href="https://github.com/zubair7384" target="_blank">
-            My Work
-          </a>
+          <Button text="My Work" href="https://github.com/zubair7384" />
         </span>
       </div>
     </div>

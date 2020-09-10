@@ -1,0 +1,24 @@
+.social_container {
+  .social_icons {
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 40%;
+    right: 10px;
+    @media (max-width: 1366px) {
+      right: 6px;
+    }
+    @media (max-width: 768px) {
+      display: none;
+    }
+    .social_images {
+      cursor: pointer;
+      width: 20px;
+      padding: 7px 0px;
+      @media (max-width: 1024px) {
+        width: 16px;
+      }
+    }
+  }
+}

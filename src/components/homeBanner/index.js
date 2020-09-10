@@ -1,9 +1,12 @@
 import React, { useState, useEffect, useRef } from "react"
-import Hello from "../../assets/svgs/hello.svg"
-import Facebook from "../../assets/svgs/facebook.svg"
-import Instagram from "../../assets/svgs/instagram.svg"
-import Twitter from "../../assets/svgs/twitter.svg"
+// import { Link } from "gatsby"
+
+// import Facebook from "../../assets/svgs/facebook.svg"
+// import Instagram from "../../assets/svgs/instagram.svg"
+// import Twitter from "../../assets/svgs/twitter.svg"
+// import Home from "../../assets/svgs/home.svg"
 import Arrow from "../../assets/svgs/arrow.svg"
+import Social from "../social"
 import Scroll from "../../assets/svgs/scroll.svg"
 import Line from "../../assets/svgs/line.svg"
 import "animate.css"
@@ -37,20 +40,7 @@ export default function HomeBanner() {
 
   return (
     <div className="container">
-      <div className="social_icons">
-        {[
-          { social: Facebook, link: "https://facebook.com/zubair.iqbal.5" },
-          { social: Twitter, link: "https://twitter.com/izubairiqbal" },
-          {
-            social: Instagram,
-            link: "https://www.instagram.com/zubair_1qbal/",
-          },
-        ].map((i, index) => (
-          <a href={i.link} target="_blank">
-            <img className="social_images" src={i.social} alt={i.social} />
-          </a>
-        ))}
-      </div>
+      <Social />
       <div
         className={`${
           goingUp && hasWindow && window.scrollY > 1

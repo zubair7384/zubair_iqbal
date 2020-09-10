@@ -1,6 +1,8 @@
 import React, { useEffect } from "react"
-import Line from "../../assets/svgs/line.svg"
 import AOS from "aos"
+import Social from "../social"
+
+import Line from "../../assets/svgs/line.svg"
 import "aos/dist/aos.css"
 import "./styles.scss"
 
@@ -12,6 +14,7 @@ export default function SkillsBanner() {
   }, [])
   return (
     <div className="skills_container">
+      <Social />
       <div className="skills_container_wrapper">
         <div className="skills_first">
           <h1 data-aos="fade-down" className="skills_text">
