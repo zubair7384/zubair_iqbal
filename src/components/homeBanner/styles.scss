@@ -31,6 +31,9 @@ body {
     @media (max-width: 1366px) {
       right: 6px;
     }
+    @media (max-width: 1024px) {
+      right: 5px;
+    }
     @media (max-width: 768px) {
       display: none;
     }

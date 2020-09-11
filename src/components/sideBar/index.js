@@ -87,18 +87,18 @@ export default class SideBar extends React.Component {
           }
         >
           <div
-            onClick={this.handleClick}
+            onClick={hasWindow && window.innerWidth > 768 && this.handleClick}
             className={
               this.state.menuStatus === "open" ? "hamburger" : "hamburger_hover"
             }
           >
             {this.state.style === "menu active" ? (
-              <div className="mobile_menu_exit">
+              <div onClick={this.handleClick} className="mobile_menu_exit">
                 <img className="exit" src={Exit} />
               </div>
             ) : (
               <div className="hamburger">
-                <div className="mobile_menu">
+                <div onClick={this.handleClick} className="mobile_menu">
                   <img src={MenuIcon} className="menu_icon" />
                 </div>
                 <div className="menu_text">

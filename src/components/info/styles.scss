@@ -1,9 +1,10 @@
 .info_container {
   .info_wrapper {
     padding-top: 2.5rem;
-    padding-left: 16px;
+    padding-left: 16.5rem;
     @media (max-width: 1366px) {
       padding-top: 2rem;
+      padding-left: 0;
     }
     @media (max-width: 768px) {
       padding: 0 0 0 19px;

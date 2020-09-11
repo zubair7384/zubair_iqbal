@@ -1,0 +1,34 @@
+.codeskill_container {
+  width: 100%;
+  box-sizing: border-box;
+  height: 100vh;
+  padding: 2% 2% 0 2%;
+  .codeskill_wrapper {
+    display: flex;
+    height: 92vh;
+    overflow: hidden;
+    .code_text_wrapper {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      background: #1ee0cd;
+      width: 50%;
+      transition: opacity 1s ease-out;
+      .code_text {
+        margin-right: -17.7rem;
+        width: 594px;
+        line-height: 87.19%;
+        font-size: 200px;
+        font-family: "Gilroy-EXtraBold";
+      }
+    }
+    .my_image_wrapper {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      .my_image {
+        width: 100%;
+      }
+    }
+  }
+}

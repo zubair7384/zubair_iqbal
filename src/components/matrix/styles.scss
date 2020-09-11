@@ -1,0 +1,79 @@
+.matrix {
+  margin: 1em auto;
+  font-family: Katakana;
+  width: 220px;
+  height: 72px;
+  overflow: hidden;
+  background: #1ee0cd;
+  color: #000;
+  font-weight: bold;
+  text-shadow: rgba(255, 255, 255, 0.8) 0px 0px 4px;
+  position: fixed;
+  bottom: 44%;
+  right: 18%;
+}
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fall {
+  from {
+    top: -250px;
+  }
+  to {
+    top: 300px;
+  }
+}
+
+.matrix div {
+  /* writing-mode: tb-rl; - ughh. doesn't work */
+  position: absolute;
+  top: 0;
+  /* arrearance */
+  transform-origin: 0%;
+  transform: rotate(90deg);
+
+  /* animation */
+  animation-name: fall, fade;
+  animation-iteration-count: infinite; /* use 0 to infinite */
+  animation-direction: normal; /* default is normal. use 'alternate' to reverse direction */
+  animation-timing-function: ease-out;
+}
+.matrix span {
+  color: #000;
+  font-weight: bold;
+}
+.f1 {
+  font-size: 8px;
+}
+.f2 {
+  font-size: 7px;
+}
+.c1 {
+  color: #000;
+  font-size: 10px;
+}
+.d1 {
+  animation-duration: 1.5s;
+  font-size: 10px;
+}
+.d2 {
+  animation-duration: 3s;
+  font-size: 10px;
+}
+.d3 {
+  animation-duration: 2.5s;
+  font-size: 10px;
+}
+.d4 {
+  animation-duration: 1.8s;
+  font-size: 10px;
+}
+.de {
+  animation-delay: 0.9s;
+  font-size: 10px;
+}
